@@ -3,9 +3,57 @@
   <head>
     <meta charset="utf-8">
     <title>CoffeeRun</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   </head>
-  <body>
+  <body class="container">
+    <header>
+      <h1>CoffeeRun</h1>
+    </header>
+    <section>
+      <div class="card">
+        <div class="card-body">
+          <form data-coffee-order="form">
+            <div class="form-group">
+              <label for="coffeeOrder">Coffee Order</label>
+              <input class="form-control" name="coffee" id="coffeeOrder" autofocus>
+            </div>
+            <div class="form-group">
+              <label for="emailInput">Email</label>
+              <input class="form-control" type="email" name="emailAddress" id="emailInput" value="" placeholder="dr@who.com">
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="size" id="short" value="short">
+              <label class="form-check-label" for="short">Short</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="size" id="tall" value="tall" checked>
+              <label class="form-check-label" for="tall">Tall</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="size" id="grande" value="grande">
+              <label class="form-check-label" for="grande">Grande</label>
+            </div>
+            <div class="form-group">
+              <label for="flavorShot">Flavor Shot</label>
+              <select class="form-control" name="flavor" id="flavorShot">
+                  <option value="">None</option>
+                  <option value="caramel">Caramel</option>
+                  <option value="almond">Almond</option>
+                  <option value="mocha">Mocha</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="strengthLevel">Caffeine Rating</label>
+              <input type="range" name="strength" value="30" id="strengthLevel">
+            </div>
+            <button type="submit" class="btn btn-outline-primary">Submit</button>
+            <button type="reset" class="btn btn-outline-primary">Reset</button>
+          </form>
+        </div>
+      </div>
+    </section>
     <script src="scripts/datastore.js" charset="utf-8"></script>
     <script src="scripts/truck.js" charset="utf-8"></script>
+    <script src="scripts/main.js" charset="utf-8"></script>
   </body>
 </html>
